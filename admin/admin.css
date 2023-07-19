@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Canela';
+  src: url('assets/fonts/Canela-Bold.otf') format('otf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+th {
+  text-align: center;
+}
+.btn {
+  margin: 5px;
+}
+
+.title{ 
+  margin: 0;
+  padding: 5rem 0 3rem 0;
+  font-family: 'Canela';
+  font-size: 28px !important;
+  font-weight: bold;
+  color: white;
+  background-color: #1F3831;
+}
+
+.thead{
+  text-align: left !important;
+}
+
+.nav{
+  background-color: #1F3831;
+}
+
+.nav-link.active{
+  color: #1F3831;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: white;
+  background-color: grey;
+}
+
+span{
+  margin-left: 5px;
+  display: inline-block;
+  transform: rotate(-5deg);
+  letter-spacing: 1px;
+  padding: 8px;
+  border-radius: 5px;
+  font-family: 'Bebas Neue';
+  font-size: 20px !important;
+  background-color: white;
+  color: #1F3831;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.pizza-mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .pizza-desktop {
+    display: none;
+  }
+
+  .pizza-mobile {
+    display: block;
+  }
+}

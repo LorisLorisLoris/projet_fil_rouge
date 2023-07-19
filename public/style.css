@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: 'Canela';
+  src: url('assets/fonts/Canela-Bold.otf') format('otf');
+}
+
+/* MOBILE FIRST */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: none;
+  margin: 0;
+  background-color: #f5f3eb;
+}
+
+main {
+  height: 100vh;
+  /* scroll-snap-type: y mandatory; */
+}
+
+a {
+  cursor: none;
+}
+
+
+/* cursor */
+
+#cursor {
+  position: fixed;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  background-color: #ad0000;
+  border-radius: 50%;
+  pointer-events: none;
+  transition:
+    background ease-in 10ms,
+    box-shadow ease-in 150ms,
+    transform ease-in 150ms;
+  transform: translate3d(0, 0, 0);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+}
+
+nav {
+  font-family: 'DM Mono';
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2em;
+}
+
+nav ul {
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  display: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #1F3831;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #1F3831;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 2px;
+}
+
+
+
+h1 {
+  font-family: 'Canela';
+  font-size: 24px;
+  color: #1F3831;
+}
+
+#logo {
+  font-family: 'DM Mono';
+  font-size: 18px;
+  color: #1F3831;
+  height: 97vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  background: url(../assets/img/logoTrattoriaNew.svg) no-repeat center center;
+  background-size: contain;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.horaires {
+  margin-bottom: 3em;
+}
+
+.options {
+  margin-bottom: 3em;
+}
+
+#carte {
+  height: 95vh;
+  background-color: #1F3831;
+  background-image: url(../assets/img/Border_Top_Section.svg), url(../assets/img/Border_Bottom_Section.svg);
+  background-position: 50% 0, 50% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 150%, 150%;
+  position: relative;
+}
+
+.tab-container {
+  width: 100%;
+}
+
+.tabs {
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue';
+  color: white;
+  text-transform: uppercase;
+  list-style-type: none;
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  opacity: 0.5;
+  padding: 10px 20px;
+}
+
+.tab:hover {
+  opacity: 1;
+}
+
+.tab.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 2px;
+}
+
+.content {
+  display: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.content.active {
+  display: flex;
+  opacity: 1;
+}
+
+.pizzas {
+  margin: 0 10vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pizzaLeft {
+  transform: rotate(-3deg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pizza-name {
+  font-family: 'Canela';
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+.ingredients {
+  font-family: 'DM Mono';
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+.allergens {
+  font-family: 'DM Mono';
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  opacity: 0.5;
+}
+
+.pizzaRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pizzaPrice {
+  font-family: 'DM Mono';
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  bottom: 10rem;
+  right: 6em;
+  border-radius: 10%;
+  padding: 1em;
+  transform: rotate(15deg);
+  color: #1F3831;
+  ;
+  background-color: #FFF;
+  z-index: 50;
+}
+
+.pizzaRight img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pizza-info:hover {
+  opacity: 1;
+}
+
+.pizza-info:not(:hover) {
+  opacity: 0.5;
+}
+
+
+/* ------------------- */
+
+#commander {
+  height: 100vh;
+  background-color: #dee0ca;
+  scroll-snap-align: start;
+}
+
+#histoire {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+#histoire h2 {
+  font-family: 'Canela';
+  font-size: 48px;
+  text-align: center;
+  color: #1F3831;
+}
+
+.about{
+  padding: 2% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about div{
+padding: 0 5%;
+}
+
+.about div:nth-of-type(1){
+  rotate: -3deg;
+}
+.about div:nth-of-type(2){
+  rotate: 2deg;
+}
+.about div:nth-of-type(3){
+  rotate: -1deg;
+}
+
+.about p {
+  font-family: 'DM Mono';
+  font-size: 0.9rem;
+}
+
+.about img{
+  padding: 5%;
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  transition: ease 0.3s;
+}
+
+  
+& .about img:hover{
+  rotate: 5deg;
+}
+
+#contact {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media screen and (min-width: 768px) {
+
+
+  nav {
+    padding: 1.5em 4em;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+
+  #logo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .horaires {
+    grid-area: 7 / 1 / 7 / 2;
+    margin-bottom: 3em;
+  }
+
+  .options {
+    grid-area: 7 / 6 / 7 / 7;
+    margin-bottom: 3em;
+  }
+
+  #carte {
+    height: 90vh;
+  }
+
+  .tabs {
+    font-size: 2rem;
+    padding: 3rem;
+  }
+
+  .content {
+    display: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .content.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .pizzas {
+    flex-direction: row;
+  }
+
+  .pizzaLeft {
+    transform: rotate(-3deg);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  .pizza-name {
+    font-family: 'Canela';
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+  }
+
+  .ingredients {
+    font-family: 'DM Mono';
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+  }
+
+  .pizzaRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pizzaPrice {
+    font-size: 18px;
+    right: 8em;
+    padding: 1.5em;
+  }
+
+  .pizzaRight img {
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  .pizza-info:hover {
+    opacity: 1;
+  }
+
+  .pizza-info:not(:hover) {
+    opacity: 0.5;
+  }
+
+
+  /* ------------------- */
+
+
+  #histoire {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+
+  #contact {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+}

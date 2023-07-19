@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/libs/locomotive-scroll.css" />
+    <title>Le Fil Rouge - Trattoria</title>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <main>
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+      <!-- ——————————————————————————    HEADER        —————————————————————————— -->
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+
+      <header>
+        <nav>
+          <h1>Le Fil Rouge</h1>
+          <ul>
+            <li><a href="#carte">LA CARTE</a></li>
+            <li><a href="#commander">COMMANDER</a></li>
+            <li><a href="#histoire">HISTOIRE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="logo">
+        <div class="horaires">DU MARDI<br />AU SAMEDI</div>
+        <div class="options">SUR PLACE<br />/ À EMPORTER</div>
+      </section>
+
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+      <!-- ——————————————————————————    CARTE         —————————————————————————— -->
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+
+      <section id="carte">
+        <div class="tab-container">
+          <ul class="tabs">
+            <li class="tab active" data-target="pizzas">Pizzas</li>
+            <li class="tab" data-target="plats">Plats</li>
+            <li class="tab" data-target="boissons">À boire</li>
+          </ul>
+        </div>
+
+        <template id="pizza-info-template">
+          <div class="pizza-info">
+            <h3 class="pizza-name"></h3>
+            <p class="ingredients"></p>
+            <!-- <p class="allergens">Gluten, Lactose</p> -->
+          </div>
+        </template>
+
+        <template id="pizza-img-template">
+          <div>
+            <img src="" alt="" />
+          </div>
+        </template>
+
+        <div class="pizzas content active">
+          <div class="pizzaLeft">
+            <!-- Infos des pizzas générées dynamiquement ici -->
+          </div>
+          <div class="pizzaRight">
+            <!-- Prix et image des pizzas générés dynamiquement ici -->
+          </div>
+        </div>
+
+        <div class="plats content"></div>
+
+        <div class="boissons content">
+          <!-- Contenu de la section "À boire" -->
+        </div>
+      </section>
+
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+      <!-- —————————————————————————— SECTION COMMANDE —————————————————————————— -->
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+
+      <!-- <section id="basket">
+        <div class="container mt-5">
+          <h2>Commande de pizzas</h2>
+          <form id="orderForm" class="mb-3">
+            <div class="form-group">
+              <label for="pizzaType">Type de pizza:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pizzaType"
+                name="pizzaType"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantité:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="quantity"
+                name="quantity"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Passer la commande
+            </button>
+          </form>
+        </div>
+      </section> -->
+
+      <!-- <section id="commander">
+        <h2>On passe à table ?</h2>
+        <p>
+          Découvrez notre délicieuse sélection de pizzas artisanales, préparées
+          avec amour et des ingrédients frais. Faites votre choix parmi nos
+          créations uniques et laissez-vous emporter par les saveurs
+          authentiques de l'Italie.
+        </p>
+
+        <p>
+          Pour passer commande, il vous suffit de suivre les étapes simples
+          ci-dessous :
+        </p>
+
+        <ol>
+          <li>
+            Parcourez notre menu alléchant et sélectionnez les pizzas qui
+            éveillent vos papilles.
+          </li>
+          <li>
+            Indiquez la quantité souhaitée et ajoutez les pizzas à votre panier.
+          </li>
+          <li>
+            Consultez votre panier pour vérifier votre sélection et ajuster les
+            quantités si nécessaire.
+          </li>
+          <li>
+            Une fois satisfait de votre commande, cliquez sur le bouton "Passer
+            commande".
+          </li>
+          <li>
+            Renseignez vos informations de livraison et de paiement pour
+            finaliser votre commande.
+          </li>
+          <li>
+            Asseyez-vous, détendez-vous et préparez-vous à savourer une
+            expérience gustative inoubliable.
+          </li>
+        </ol>
+
+        <p>
+          Nous nous engageons à vous livrer vos pizzas chaudes et prêtes à
+          déguster dans les plus brefs délais. Notre équipe dévouée met tout en
+          œuvre pour vous offrir un service de qualité et une expérience
+          culinaire exceptionnelle.
+        </p>
+
+        <p>
+          Alors, n'attendez plus ! Plongez dans notre menu et laissez-nous
+          régaler vos papilles avec nos délicieuses pizzas faites maison.
+        </p>
+      </section> -->
+
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+      <!-- ——————————————————————————    HISTOIRE      —————————————————————————— -->
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+
+      <section id="histoire">
+        <h2>Notre histoire</h2>
+        <div class="about">
+          <div>
+            <img src="../assets/img/table.jpg" alt="tablée" />
+
+            <p>
+              Notre équipe de passionnés de cuisine met tout son savoir-faire et
+              son amour pour les saveurs italiennes dans chaque plats que nous
+              préparons. Nous accordons une attention particulière aux détails,
+              à la cuisson parfaite de la pâte, à l'équilibre des saveurs et à
+              la présentation visuelle de chaque création.
+            </p>
+          </div>
+          <div>
+            <img src="../assets/img/repas.jpg" alt="repas" />
+
+            <p>
+              Nous croyons fermement que les meilleurs ingrédients et les
+              techniques de préparation traditionnelles font toute la différence
+              dans le goût et la qualité de nos pizzas. C'est pourquoi nous nous
+              approvisionnons en produits frais et locaux, sélectionnons avec
+              soin les meilleurs fromages, charcuteries et légumes, et préparons
+              notre pâte à pizza maison chaque jour, en suivant des recettes
+              transmises de génération en génération.
+            </p>
+          </div>
+          <div>
+            <img src="../assets/img/tony.jpg" alt="tony" />
+
+            <p>
+              Au fil des années, nous avons eu la chance de partager notre amour
+              des pizzas avec une communauté grandissante de clients fidèles.
+              Leurs retours positifs et leur soutien continu sont notre plus
+              grande récompense et nous motivent à continuer à nous améliorer
+              chaque jour.
+            </p>
+          </div>
+        </div>
+        <div></div>
+      </section>
+
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+      <!-- ——————————————————————————   SECTION CONTACT  ———————————————————————— -->
+      <!-- ———————————————————————————————————————————————————————————————————————-->
+
+      <footer id="contact"></footer>
+    </main>
+
+    <script src="locomotive-scroll.min.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
